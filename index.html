@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./app.css">
+    <link rel="stylesheet" href="./animations.css">
+    <title>Quizzy</title>
+</head>
+<body>
+    <div class="logo">
+        <h1>Quizzy</h1>
+        <p>A simple app that provides you with random math questions.</p>
+    </div>
+    <div class="start show">
+        <div class="header">
+            <h2>Select the difficulty and the type of questions you want and hit the Start button to continue.</h2>
+        </div>
+        <div class="start-options">
+            <span class="option-container" operand='+'>Addition</span>
+            <span class="option-container" operand='-'>Subtraction</span>
+            <span class="option-container" operand='×'>Multiplication</span>
+            <span class="option-container" operand='÷'>Division</span>
+        </div>
+        <div class="difficulty">
+            <label>Choose a difficulty:</label>
+            <select id='difficulty'>
+                <option value="easy">Easy</option>
+                <option value="average">Average</option>
+                <option value="hard">Hard</option>
+            </select>    
+        </div>
+        <div class="difficulty">
+            <label>Choose No of Questions:</label>
+            <input id='totalQuestions' type="number" value="10" min='1'>
+        </div>
+        <div class="start-footer">
+            <button type="button" id="start">Start</button>
+        </div>
+    </div>
+    <div class="question hide">
+        <div class="header">
+            <h2>What is 2x8=?</h2>
+        </div>
+        <div class="options">
+        </div>
+        <div class="footer">
+            <button type="button">Next Question</button>
+        </div>
+    </div>
+    <div class="result hide">
+        <div class="header">
+            <h2>Your Score</h2>
+        </div>
+        <div class="options">
+        </div>
+        <div class="result-footer">
+            <button id='restart' type="button" onclick='location.reload()'>Restart</button>
+        </div>
+        <div class="grade"><p>A</p></div>
+    </div>
+    <div class="notify"></div>
+    <p class="link">Created by <a href="https://github.com/ziadevcom" target="_blank">Zia Ahmad</a></p>
+</body>
+<script src="./app.js"></script>
+</html>
